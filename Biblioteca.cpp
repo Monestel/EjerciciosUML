@@ -8,7 +8,7 @@
 Biblioteca::Biblioteca(string nombre, int capacidad) {
     this->nombre = nombre;
     this->capacidad = capacidad;
-    capacidad = 0;
+    this->cantidad = 0;
     libros = new Libro*[capacidad];
 }
 
@@ -25,11 +25,11 @@ void Biblioteca::agregarLibro(Libro *libro) {
 }
 
 void Biblioteca::listarLibros() {
-   cout << "Libros en la biblioteca: " << nombre << endl;
+   cout << "Libros en la biblioteca " << nombre << ":" << endl;
     for (int i = 0; i < cantidad; i++) {
         cout << "- "
              << libros[i]->getTitulo()
-             << " Autor: "
+             << ", autor "
              << libros[i]->getAutor()
              << endl;
     }

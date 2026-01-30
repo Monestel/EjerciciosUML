@@ -7,6 +7,12 @@
 #include "Calculadora.h"
 #include "Operacion.h"
 #include "Automovil.h"
+#include "Cocinero.h"
+#include "Receta.h"
+#include "Museo.h"
+#include "ObraArte.h"
+#include "IDE.h"
+#include "Programador.h"
 
 using namespace std;
 
@@ -59,13 +65,71 @@ int main() {
     cout << "Resultado suma: " << Casio.calcularSuma(&ope) << endl;
     cout << "Resultado resta: " << Casio.calcularResta(&ope) << endl;
     cout << "Resultado division: " << Casio.calcularDivision(&ope) << endl;
+    cout << endl;
 
 
 
-    cout <<"--- Ejercicio 5: ---" << endl;
+    cout <<"--- Ejercicio 6: ---" << endl;
 
     Automovil Batimovil;
     Batimovil.mostrarRuedas();
+    cout << endl;
+
+
+
+    cout << "--- Ejercicio 20: ---" << endl;
+
+    Receta platillo1("Beef Wellington");
+    Cocinero cocinero1("Gordon Ramsay");
+
+    Receta platillo2("Ratatouille");
+    Cocinero cocinero2("Remy");
+
+    cocinero1.cocinar(platillo1);
+    cocinero2.cocinar(platillo2);
+    cout << endl;
+
+
+
+    cout << "--- Ejercicio 27: ---" << endl;
+
+    Museo mus("Museo del Jade", 6);
+    ObraArte obra1("Apolo de Belvedere", "Leocares", 120);
+    ObraArte obra2("Saturno devorando a su hijo", "Francisco de Goya", 1823);
+    ObraArte obra3("Meidias Hydria", "Meidias",-420);
+
+    mus.agregarObra(&obra1);
+    mus.agregarObra(&obra2);
+    mus.agregarObra(&obra3);
+
+    mus.listarObras();
+    cout << endl;
+
+
+
+    cout << "--- Ejercicio 28: ---" << endl;
+
+    IDE ide1("Clion", "c++");
+    Programador prog1("David", 18, "Riot Games");
+
+    IDE ide2("Clion", "c++");
+    Programador prog2("Keilor", 23, "Microsoft");
+
+    IDE ide3("Zinjal", "c++");
+    Programador prog3("Luis Diego", 19, "Amazon");
+
+    cout << "Programador 1: \n";
+    prog1.escribirCodigo(ide1);
+
+    cout << "\nProgramador 2:\n";
+    prog2.escribirCodigo(ide2);
+
+    cout << "\nProgramador 3:\n";
+    prog3.escribirCodigo(ide3);
+    cout << endl;
+
+    cout << "--- Final de los ejercicios ---" << endl;
+    cout << "--- Total de 8 ejercicios ---" << endl;
 
     return 0;
 }

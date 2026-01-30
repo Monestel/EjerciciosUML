@@ -23,7 +23,7 @@ void Profesor::calificarEstudiante(Estudiante *estudiante) {
 }
 
 void Profesor::listarEstudiantes() {
-    cout << "Estudiantes calificados por: " << nombre << ":\n";
+    cout << "Estudiantes calificados por " << nombre << ":\n";
     for (int i = 0; i < cantidad; i++) {
         cout << "- " << estudiantes[i]->getNombre() << endl;
     }

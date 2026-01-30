@@ -8,7 +8,7 @@
 Casa::Casa(string direccion, int capacidad) {
     this->direccion = direccion;
     this->capacidad = capacidad;
-    capacidad = 0;
+    this->cantidad = 0;
     habitaciones = new Habitacion*[capacidad];
 }
 
@@ -27,8 +27,8 @@ void Casa::agregarHabitacion(string nombre) {
 }
 
 void Casa::listarHabitaciones() {
-    cout << "Habitaciones en la casa en: " << direccion << ":\n";
-    for (int i = 0; i < capacidad; i++) {
+    cout << "Habitaciones en la casa en " << direccion << ":\n";
+    for (int i = 0; i < cantidad; i++) {
         cout << "- " << habitaciones[i]->getNombre() << endl;
     }
 }
